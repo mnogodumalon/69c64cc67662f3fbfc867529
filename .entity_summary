@@ -1,0 +1,7 @@
+- Mitglieder (mitglieder): vorname[string/text], nachname[string/text], geburtsdatum[date/date], geschlecht[lookup/radio], email[string/email], telefon[string/tel], strasse[string/text], hausnummer[string/text], postleitzahl[string/text], stadt[string/text], mitgliedschaft_typ[lookup/select], mitglied_seit[date/date], notfall_vorname[string/text], notfall_nachname[string/text], notfall_telefon[string/tel], gesundheitshinweise[string/textarea]
+- Buchungen (buchungen): mitglied[applookup/select], kurs[applookup/select], zahlungsstatus[lookup/radio], zahlungsart[lookup/select], betrag[number], anmerkungen[string/textarea], buchungsdatum[date/date]
+  → mitglied links to app_id 69c64ca94239a6f64d141247
+  → kurs links to app_id 69c64ca968df8b8b7588964b
+- Trainer (trainer): nachname[string/text], email[string/email], telefon[string/tel], spezialisierungen[multiplelookup/checkbox], ausbildung[string/textarea], erfahrung_jahre[number], biografie[string/textarea], foto[file], vorname[string/text]
+- Kurse (kurse): kursname[string/text], yoga_stil[lookup/select], beschreibung[string/textarea], niveau[lookup/radio], wochentag[multiplelookup/checkbox], uhrzeit[string/text], dauer_minuten[number], startdatum[date/date], enddatum[date/date], raum[string/text], max_teilnehmer[number], kursgebuehr[number], trainer[applookup/select]
+  → trainer links to app_id 69c64ca4e8626bc986a4e869
