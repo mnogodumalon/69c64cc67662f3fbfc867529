@@ -1,9 +1,9 @@
+import { lazy, Suspense } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ActionsProvider } from '@/context/ActionsContext';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import MitgliederPage from '@/pages/MitgliederPage';
 import BuchungenPage from '@/pages/BuchungenPage';
@@ -13,6 +13,9 @@ import PublicFormMitglieder from '@/pages/public/PublicForm_Mitglieder';
 import PublicFormBuchungen from '@/pages/public/PublicForm_Buchungen';
 import PublicFormTrainer from '@/pages/public/PublicForm_Trainer';
 import PublicFormKurse from '@/pages/public/PublicForm_Kurse';
+
+const MitgliedEinschreibenPage = lazy(() => import('@/pages/intents/MitgliedEinschreibenPage'));
+const KursPlanenPage = lazy(() => import('@/pages/intents/KursPlanenPage'));
 
 export default function App() {
   return (
@@ -25,7 +28,9 @@ export default function App() {
             <Route path="public/69c64ca4e8626bc986a4e869" element={<PublicFormTrainer />} />
             <Route path="public/69c64ca968df8b8b7588964b" element={<PublicFormKurse />} />
             <Route element={<Layout />}>
-              <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+              <Route index element={<DashboardOverview />} />
+              <Route path="intents/mitglied-einschreiben" element={<Suspense fallback={null}><MitgliedEinschreibenPage /></Suspense>} />
+              <Route path="intents/kurs-planen" element={<Suspense fallback={null}><KursPlanenPage /></Suspense>} />
               <Route path="mitglieder" element={<MitgliederPage />} />
               <Route path="buchungen" element={<BuchungenPage />} />
               <Route path="trainer" element={<TrainerPage />} />

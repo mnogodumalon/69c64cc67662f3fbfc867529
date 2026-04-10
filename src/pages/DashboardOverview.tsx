@@ -7,7 +7,7 @@ import { LivingAppsService, createRecordUrl } from '@/services/livingAppsService
 import { formatDate, formatCurrency } from '@/lib/formatters';
 import { useState, useMemo } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconCalendar, IconUsers, IconClock, IconMapPin, IconUserCircle, IconChartBar } from '@tabler/icons-react';
+import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconCalendar, IconUsers, IconClock, IconMapPin, IconUserCircle, IconChartBar, IconUserPlus, IconChevronRight } from '@tabler/icons-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { StatCard } from '@/components/StatCard';
@@ -129,6 +129,29 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Workflow-Navigation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/mitglied-einschreiben" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+          <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
+            <IconUserPlus size={20} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-foreground truncate">Mitglied einschreiben</div>
+            <div className="text-sm text-muted-foreground truncate">Mitglied auswählen und in einen Kurs buchen</div>
+          </div>
+          <IconChevronRight size={18} className="flex-shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+        <a href="#/intents/kurs-planen" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+          <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
+            <IconCalendar size={20} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-foreground truncate">Kurs planen</div>
+            <div className="text-sm text-muted-foreground truncate">Trainer zuweisen und Teilnehmer verwalten</div>
+          </div>
+          <IconChevronRight size={18} className="flex-shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+      </div>
       {/* KPI Zeile */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard
