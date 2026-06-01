@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "kurse",
+      "app_id": "69c64ca968df8b8b7588964b",
+      "path": "/rest/apps/69c64ca968df8b8b7588964b/records",
+      "allowed_fields": [
+        "kursname",
+        "yoga_stil",
+        "beschreibung",
+        "niveau",
+        "wochentag",
+        "uhrzeit",
+        "dauer_minuten",
+        "startdatum",
+        "enddatum",
+        "raum",
+        "max_teilnehmer",
+        "kursgebuehr"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Kurse — Formular"
+    },
+    {
+      "entity": "mitglieder",
+      "app_id": "69c64ca94239a6f64d141247",
+      "path": "/rest/apps/69c64ca94239a6f64d141247/records",
+      "allowed_fields": [
+        "vorname",
+        "nachname",
+        "geburtsdatum",
+        "geschlecht",
+        "email",
+        "telefon",
+        "strasse",
+        "hausnummer",
+        "postleitzahl",
+        "stadt",
+        "mitgliedschaft_typ",
+        "mitglied_seit",
+        "notfall_vorname",
+        "notfall_nachname",
+        "notfall_telefon",
+        "gesundheitshinweise"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Mitglieder — Formular"
+    },
+    {
+      "entity": "buchungen",
+      "app_id": "69c64caa332ffb5d818518fb",
+      "path": "/rest/apps/69c64caa332ffb5d818518fb/records",
+      "allowed_fields": [
+        "zahlungsstatus",
+        "zahlungsart",
+        "betrag",
+        "anmerkungen",
+        "buchungsdatum"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Buchungen — Formular"
+    },
+    {
+      "entity": "trainer",
+      "app_id": "69c64ca4e8626bc986a4e869",
+      "path": "/rest/apps/69c64ca4e8626bc986a4e869/records",
+      "allowed_fields": [
+        "nachname",
+        "email",
+        "telefon",
+        "spezialisierungen",
+        "ausbildung",
+        "erfahrung_jahre",
+        "biografie",
+        "vorname"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Trainer — Formular"
+    }
+  ]
+}

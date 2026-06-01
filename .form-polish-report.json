@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "Kurse": {
+      "placeholders_set": 11,
+      "defaults_keys": [
+        "startdatum",
+        "enddatum",
+        "dauer_minuten",
+        "max_teilnehmer",
+        "kursgebuehr"
+      ],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten für Yoga-Kurse. Kein Multiplika­tor (Tage × Preis), keine komplexen Abhängigkeiten. Kursgebühr ist pauschaler Preis pro Kurs, nicht abhängig von Buchungsdauer."
+    },
+    "Mitglieder": {
+      "placeholders_set": 16,
+      "defaults_keys": [
+        "mitglied_seit",
+        "mitgliedschaft_typ"
+      ],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten. Keine Preisfelder, keine applookup-Ketten, keine Berechnungen möglich."
+    },
+    "Buchungen": {
+      "placeholders_set": 7,
+      "defaults_keys": [
+        "buchungsdatum",
+        "zahlungsstatus"
+      ],
+      "computed_keys": [],
+      "reason": "Transaktionsmodell ohne Mengenmultiplikator. Betrag ist manuell einzutragen (kann vom Kurspreis abweichen durch Rabatte). Keine automatische Berechnung sinnvoll, da User-Flexibilität gewünscht ist."
+    },
+    "Trainer": {
+      "placeholders_set": 7,
+      "defaults_keys": [
+        "erfahrung_jahre"
+      ],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten. Nur Name, Kontakt, Spezialisierungen, Erfahrung, Biografie. Keine numerischen Abhängigkeiten, keine Berechnungen."
+    }
+  }
+}

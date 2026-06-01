@@ -1,0 +1,52 @@
+{
+  "KurseDialog.tsx": {
+    "kursname": "z. B. Hatha für Anfänger",
+    "yoga_stil": "Wähle einen Yoga-Stil",
+    "beschreibung": "Zielgruppe, Ablauf, besondere Merkmale oder Anforderungen",
+    "uhrzeit": "z. B. 18:00 Uhr",
+    "dauer_minuten": "z. B. 60",
+    "startdatum": "Wann startet der Kurs?",
+    "enddatum": "Wann endet der Kurs?",
+    "raum": "z. B. Yoga-Studio West",
+    "max_teilnehmer": "z. B. 12",
+    "kursgebuehr": "z. B. 15,00",
+    "trainer": "Welcher Trainer leitet den Kurs?"
+  },
+  "MitgliederDialog.tsx": {
+    "vorname": "z. B. Maria",
+    "nachname": "z. B. Schmidt",
+    "geburtsdatum": "Geburtsdatum eingeben",
+    "geschlecht": "Geschlecht wählen",
+    "email": "z. B. maria@example.com",
+    "telefon": "z. B. 030-123456789",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "postleitzahl": "z. B. 10115",
+    "stadt": "z. B. Berlin",
+    "mitgliedschaft_typ": "Mitgliedschaftstyp wählen",
+    "mitglied_seit": "Wann ist das Mitglied beigetreten?",
+    "notfall_vorname": "z. B. Michael",
+    "notfall_nachname": "z. B. Schmidt",
+    "notfall_telefon": "z. B. 030-987654321",
+    "gesundheitshinweise": "Allergien, Verletzungen, Einschränkungen oder Erkrankungen"
+  },
+  "BuchungenDialog.tsx": {
+    "mitglied": "Welches Mitglied bucht?",
+    "kurs": "Welcher Kurs wird gebucht?",
+    "zahlungsstatus": "Zahlungsstatus setzen",
+    "zahlungsart": "Wie wird bezahlt?",
+    "betrag": "z. B. 15,00",
+    "anmerkungen": "Besonderheiten, Rabattgründe, Gutschein-Info",
+    "buchungsdatum": "Wann ist die Buchung erfolgt?"
+  },
+  "TrainerDialog.tsx": {
+    "vorname": "z. B. Anna",
+    "nachname": "z. B. Müller",
+    "email": "z. B. anna@yogastudio.de",
+    "telefon": "z. B. 030-111222333",
+    "spezialisierungen": "Welche Yoga-Stile unterrichtet der Trainer?",
+    "ausbildung": "Zertifikate, Ausbildungsstätten, Abschlüsse",
+    "erfahrung_jahre": "z. B. 8",
+    "biografie": "Persönlicher Hintergrund, Philosophie, Leidenschaft"
+  }
+}
