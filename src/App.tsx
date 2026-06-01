@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import KursePage from '@/pages/KursePage';
 import KurseDetailPage from '@/pages/KurseDetailPage';
@@ -23,6 +22,8 @@ import PublicFormTrainer from '@/pages/public/PublicForm_Trainer';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const KursBuchenPage = lazy(() => import('@/pages/intents/KursBuchenPage'));
+const KursErstellenPage = lazy(() => import('@/pages/intents/KursErstellenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -39,7 +40,7 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="kurse" element={<KursePage />} />
                 <Route path="kurse/:id" element={<KurseDetailPage />} />
                 <Route path="mitglieder" element={<MitgliederPage />} />
@@ -50,6 +51,8 @@ export default function App() {
                 <Route path="trainer/:id" element={<TrainerDetailPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/kurs-buchen" element={<Suspense fallback={null}><KursBuchenPage /></Suspense>} />
+                <Route path="intents/kurs-erstellen" element={<Suspense fallback={null}><KursErstellenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>

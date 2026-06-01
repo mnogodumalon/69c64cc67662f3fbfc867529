@@ -16,7 +16,7 @@ import {
   IconAlertCircle, IconTool, IconRefresh, IconCheck,
   IconPlus, IconPencil, IconTrash, IconUsers, IconCalendar,
   IconClock, IconMapPin, IconCurrencyEuro, IconSchool,
-  IconChartBar,
+  IconChartBar, IconChevronRight, IconBookmark, IconPlayerPlay,
 } from '@tabler/icons-react';
 import {
   RecordOverlay, RecordHeader, RecordKeyFacts, RecordSection,
@@ -230,6 +230,30 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent Workflow Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/kurs-buchen" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconBookmark size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold text-foreground truncate">Mitglied in Kurs buchen</p>
+            <p className="text-sm text-muted-foreground truncate">Mitglied auswählen, Kurs wählen & Buchung erfassen</p>
+          </div>
+          <IconChevronRight size={18} className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+        <a href="#/intents/kurs-erstellen" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconPlayerPlay size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold text-foreground truncate">Neuen Kurs erstellen</p>
+            <p className="text-sm text-muted-foreground truncate">Kursdetails anlegen & Trainer zuweisen</p>
+          </div>
+          <IconChevronRight size={18} className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+      </div>
+
       {/* KPI Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard
